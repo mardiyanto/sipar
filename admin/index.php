@@ -74,9 +74,9 @@
         <!-- Logo -->
         <a href="index.aspx" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>A</b>SET</span>
+          <span class="logo-mini"><b>A</b><?php echo"$k_k[nama_app]";?></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg">PUPR</span>
+          <span class="logo-lg"><?php echo"$k_k[nama_app]";?></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
@@ -90,7 +90,7 @@
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="../foto/logo.png" class="user-image" alt="User Image">
-                  <span class="hidden-xs">SI PUPR </span>
+                  <span class="hidden-xs"><?php echo"$k_k[nama_app]";?></span>
                 </a>
                
               </li>

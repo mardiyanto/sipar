@@ -119,17 +119,20 @@ echo"
 <form id='form1'  method='post' enctype='multipart/form-data' action='master/profil.php?act=editpro&id_p=$_GET[id_p]'>
        <div class='form-grup'>
         <label>Nama Aplikasi</label>
+        <input type='hidden' class='form-control' value='$t[jenis]' name='jenis'/>
         <input type='text' class='form-control' value='$t[nama_app]' name='nama_app'/><br>
         <label>Nama</label>
         <input type='text' class='form-control' value='$t[nama]' name='jd'/><br>
-		<label>Alias</label>
+		<label>email</label>
         <input type='text' class='form-control' value='$t[alias]' name='alias'/><br>
-		<label>Tahun</label>
+		<label>no hp</label>
         <input type='text' class='form-control' value='$t[tahun]' name='tahun'/><br>
 		<label>Alamat</label>
         <input type='text' class='form-control' value='$t[alamat]' name='alamat'/><br>
-        <label>Gambar Begroud Aplikasi</label>
+        <label>Logo</label>
         <input type='file' class='smallInput'  name='gambar'/><br>
+        <label>Gambar Profil</label>
+        <input type='file' class='smallInput'  name='foto'/><br>
 		<label>Isi</label>
         <textarea id='text-ckeditor' class='form-control' name='isi'>$t[isi]</textarea></br>
 		<script>CKEDITOR.replace('text-ckeditor');</script>
