@@ -4,20 +4,20 @@
 if($_GET['aksi']=='home'){
     $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE id_berita=$_GET[id_berita]");
 $t=mysqli_fetch_array($tebaru);
-    echo" <!-- Page Header Start -->
-    <div class='container-fluid page-header py-5 mb-5 wow fadeIn' data-wow-delay='0.1s'>
-        <div class='container py-5'>
-            <h1 class='display-3 text-white animated slideInRight'>$t[judul]</h1>
-            <nav aria-label='breadcrumb'>
-                <ol class='breadcrumb animated slideInRight mb-0'>
-                    <li class='breadcrumb-item'><a href='index.php'>Beranda</a></li>
-                    <li class='breadcrumb-item'><a href='#'>Halaman</a></li>
-                    <li class='breadcrumb-item active' aria-current='page'>$t[judul]</li>
-                </ol>
-            </nav>
+    echo" 
+    <!-- Header Start -->
+    <div class='container-fluid bg-breadcrumb'>
+        <div class='container text-center py-5' style='max-width: 900px;'>
+            <h3 class='text-white display-3 mb-4 wow fadeInDown' data-wow-delay='0.1s'>$t[judul]</h1>
+            <ol class='breadcrumb justify-content-center text-white mb-0 wow fadeInDown' data-wow-delay='0.3s'>
+                <li class='breadcrumb-item'><a href='index.php' class='text-white'>Home</a></li>
+                <li class='breadcrumb-item'><a href='#' class='text-white'>Pages</a></li>
+                <li class='breadcrumb-item active text-secondary'>$t[judul]</li>
+            </ol>    
         </div>
     </div>
-    <!-- Page Header End -->
+    <!-- Header End -->
+    
     <div class='container-fluid py-5'>
     <div class='container'>
         <div class='row g-5'>
@@ -39,20 +39,18 @@ $t=mysqli_fetch_array($tebaru);
     ";
 }
 elseif($_GET['aksi']=='informasi'){   
-echo"<!-- Page Header Start -->
-<div class='container-fluid page-header py-5 mb-5 wow fadeIn' data-wow-delay='0.1s'>
-    <div class='container py-5'>
-        <h1 class='display-3 text-white animated slideInRight'>Informasi</h1>
-        <nav aria-label='breadcrumb'>
-            <ol class='breadcrumb animated slideInRight mb-0'>
-                <li class='breadcrumb-item'><a href='index.php'>Beranda</a></li>
-                <li class='breadcrumb-item'><a href='#'>Halaman</a></li>
-                <li class='breadcrumb-item active' aria-current='page'>Berita</li>
-            </ol>
-        </nav>
+echo" <!-- Header Start -->
+<div class='container-fluid bg-breadcrumb'>
+    <div class='container text-center py-5' style='max-width: 900px;'>
+        <h3 class='text-white display-3 mb-4 wow fadeInDown' data-wow-delay='0.1s'>Informasi</h1>
+        <ol class='breadcrumb justify-content-center text-white mb-0 wow fadeInDown' data-wow-delay='0.3s'>
+            <li class='breadcrumb-item'><a href='index.php' class='text-white'>Home</a></li>
+            <li class='breadcrumb-item'><a href='#' class='text-white'>Pages</a></li>
+            <li class='breadcrumb-item active text-secondary'>Informasi</li>
+        </ol>    
     </div>
 </div>
-<!-- Page Header End -->
+<!-- Header End -->
 
 <div class='container-fluid py-5'>
 <div class='container'>
@@ -62,9 +60,10 @@ echo"<!-- Page Header Start -->
             $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE jenis='informasi' ORDER BY id_berita DESC LIMIT 4");              
 while ($t=mysqli_fetch_array($tebaru)){
                 
-                echo"<div class='col-md-6 wow fadeIn' data-wow-delay='0.1s'>
+                echo"
+                <div class='col-md-6 wow fadeIn' data-wow-delay='0.1s'>
                     <div class='blog-item bg-light position-relative'>
-                        <a href class='position-absolute top-0 start-0 m-4 py-1 px-3 bg-primary text-dark fw-medium' style='z-index: 1;'>$t[jenis]</a>
+                        
                         <div class='overflow-hidden'>
                             <img class='img-fluid' src='foto/data/$t[gambar]' alt='Image'>
                         </div>
@@ -118,20 +117,18 @@ echo"
 elseif($_GET['aksi']=='detailberita'){   
     $tebaru=mysqli_query($koneksi," SELECT * FROM berita WHERE id_berita=$_GET[id_berita] ");
 $t=mysqli_fetch_array($tebaru);
-    echo"<!-- Page Header Start -->
-    <div class='container-fluid page-header py-5 mb-5 wow fadeIn' data-wow-delay='0.1s'>
-        <div class='container py-5'>
-            <h1 class='display-3 text-white animated slideInRight'>Detail Informasi</h1>
-            <nav aria-label='breadcrumb'>
-                <ol class='breadcrumb animated slideInRight mb-0'>
-                    <li class='breadcrumb-item'><a href='index.php'>Beranda</a></li>
-                    <li class='breadcrumb-item'><a href='#'>Halaman</a></li>
-                    <li class='breadcrumb-item active' aria-current='page'>informasi</li>
-                </ol>
-            </nav>
+    echo"<!-- Header Start -->
+    <div class='container-fluid bg-breadcrumb'>
+        <div class='container text-center py-5' style='max-width: 900px;'>
+            <h3 class='text-white display-3 mb-4 wow fadeInDown' data-wow-delay='0.1s'>Informasi</h1>
+            <ol class='breadcrumb justify-content-center text-white mb-0 wow fadeInDown' data-wow-delay='0.3s'>
+                <li class='breadcrumb-item'><a href='index.php' class='text-white'>Home</a></li>
+                <li class='breadcrumb-item'><a href='#' class='text-white'>Pages</a></li>
+                <li class='breadcrumb-item active text-secondary'>Informasi</li>
+            </ol>    
         </div>
     </div>
-    <!-- Page Header End -->
+    <!-- Header End -->
     <div class='container-fluid py-5'>
     <div class='container'>
         <div class='row g-5'>
@@ -148,20 +145,18 @@ $t=mysqli_fetch_array($tebaru);
     ";
     }
 elseif($_GET['aksi']=='hubungi'){  
-echo"<!-- Page Header Start -->
-<div class='container-fluid page-header py-5 mb-5 wow fadeIn' data-wow-delay='0.1s'>
-    <div class='container py-5'>
-        <h1 class='display-3 text-white animated slideInRight'>Konta Kami</h1>
-        <nav aria-label='breadcrumb'>
-            <ol class='breadcrumb animated slideInRight mb-0'>
-                <li class='breadcrumb-item'><a href='index.php'>Beranda</a></li>
-                <li class='breadcrumb-item'><a href='#'>Halaman</a></li>
-                <li class='breadcrumb-item active' aria-current='page'>Informasi Kontak Kami</li>
-            </ol>
-        </nav>
+echo"<!-- Header Start -->
+<div class='container-fluid bg-breadcrumb'>
+    <div class='container text-center py-5' style='max-width: 900px;'>
+        <h3 class='text-white display-3 mb-4 wow fadeInDown' data-wow-delay='0.1s'>Hubungi</h1>
+        <ol class='breadcrumb justify-content-center text-white mb-0 wow fadeInDown' data-wow-delay='0.3s'>
+            <li class='breadcrumb-item'><a href='index.php' class='text-white'>Home</a></li>
+            <li class='breadcrumb-item'><a href='#' class='text-white'>Pages</a></li>
+            <li class='breadcrumb-item active text-secondary'>Hubungi</li>
+        </ol>    
     </div>
 </div>
-<!-- Page Header End --><!-- Contact Start -->
+<!-- Header End -->
 <div class='container-xxl py-5'>
     <div class='container'>
         <div class='row g-5 justify-content-center mb-5'>
@@ -171,8 +166,8 @@ echo"<!-- Page Header Start -->
                         <i class='fa fa-phone-alt fa-2x text-primary'></i>
                     </div>
                     <h4 class='mb-3'>Nomor Handphone</h4>
-                    <p class='mb-2'>+62 8137-9567-636</p>
-                    <a class='btn btn-primary px-4' href='tel:+62 8137-9567-636'>Call Now <i class='fa fa-arrow-right ms-2'></i></a>
+                    <p class='mb-2'>$k_k[tahun]</p>
+                    <a class='btn btn-primary px-4' href='tel:$k_k[tahun]'>Call Now <i class='fa fa-arrow-right ms-2'></i></a>
                 </div>
             </div>
             <div class='col-lg-4 col-md-6 wow fadeInUp' data-wow-delay='0.3s'>
@@ -181,8 +176,8 @@ echo"<!-- Page Header Start -->
                         <i class='fa fa-envelope-open fa-2x text-primary'></i>
                     </div>
                     <h4 class='mb-3'>Email Address</h4>
-                    <p class='mb-4'>ponpes_alhidayahkeputran@gmail.com</p>
-                    <a class='btn btn-primary px-4' href='ponpes_alhidayahkeputran@gmail.com'>Email Now <i class='fa fa-arrow-right ms-2'></i></a>
+                    <p class='mb-4'>$k_k[alias]</p>
+                    <a class='btn btn-primary px-4' href='$k_k[alias]'>Email Now <i class='fa fa-arrow-right ms-2'></i></a>
                 </div>
             </div>
             <div class='col-lg-4 col-md-6 wow fadeInUp' data-wow-delay='0.5s'>
@@ -217,7 +212,7 @@ echo"<!-- Page Header Start -->
                             </div>
                             <div class='ms-3'>
                                 <h6>Call Us</h6>
-                                <span>+62 8137-9567-636</span>
+                                <span>$k_k[tahun]</span>
                             </div>
                         </div>
                     </div>
@@ -228,7 +223,7 @@ echo"<!-- Page Header Start -->
                             </div>
                             <div class='ms-3'>
                                 <h6>Mail Us</h6>
-                                <span>ponpes_alhidayahkeputran@gmail.com</span>
+                                <span>$k_k[alias]</span>
                             </div>
                         </div>
                     </div>
@@ -271,26 +266,24 @@ elseif($_GET['aksi']=='inputhubungi'){
     window.location=('index.php')</script>";
 }
 elseif($_GET['aksi']=='galeri'){
-echo"<!-- Page Header Start -->
-<div class='container-fluid page-header py-5 mb-5 wow fadeIn' data-wow-delay='0.1s'>
-    <div class='container py-5'>
-        <h1 class='display-3 text-white animated slideInRight'>Galeri</h1>
-        <nav aria-label='breadcrumb'>
-            <ol class='breadcrumb animated slideInRight mb-0'>
-                <li class='breadcrumb-item'><a href='index.php'>Beranda</a></li>
-                <li class='breadcrumb-item'><a href='#'>Halaman</a></li>
-                <li class='breadcrumb-item active' aria-current='page'>Galeri Kami</li>
-            </ol>
-        </nav>
+echo"<!-- Header Start -->
+<div class='container-fluid bg-breadcrumb'>
+    <div class='container text-center py-5' style='max-width: 900px;'>
+        <h3 class='text-white display-3 mb-4 wow fadeInDown' data-wow-delay='0.1s'>Galeri</h1>
+        <ol class='breadcrumb justify-content-center text-white mb-0 wow fadeInDown' data-wow-delay='0.3s'>
+            <li class='breadcrumb-item'><a href='index.php' class='text-white'>Home</a></li>
+            <li class='breadcrumb-item'><a href='#' class='text-white'>Pages</a></li>
+            <li class='breadcrumb-item active text-secondary'>Galeri</li>
+        </ol>    
     </div>
 </div>
-<!-- Page Header End -->
+<!-- Header End -->
 <!-- Projects Start -->
     <div class='container-xxl py-5'>
         <div class='container'>
             <div class='text-center mx-auto wow fadeInUp' data-wow-delay='0.1s' style='max-width: 500px;'>
                 <p class='fs-5 fw-bold text-primary'>Galeri</p>
-                <h1 class='display-5 mb-5'>Galeri Podok Pesantren Kami</h1>
+                <h1 class='display-5 mb-5'>Galeri Kami</h1>
             </div>
            
             <div class='row g-4 portfolio-container'> ";
