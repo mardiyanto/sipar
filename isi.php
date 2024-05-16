@@ -194,7 +194,7 @@ echo"<!-- Header Start -->
         <div class='row mb-5'>
             <div class='col-12 wow fadeInUp' data-wow-delay='0.1s'>
                 <iframe class='w-100'
-                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.4524823018796!2d104.90447442498368!3d-5.347694544630967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4731b962dd44bb%3A0xe40d7d4efab593b9!2sPondok%20Pesantren%20Al%20Hidayah%20Pringsewu!5e0!3m2!1sid!2sid!4v1714456194268!5m2!1sid!2sid'
+                src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d213880.80085089884!2d103.85459111233278!3d-5.071891683462296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e47bb6aa7bbfb69%3A0xaadd3538afa3d0bb!2sKabupaten%20Pesisir%20Barat%2C%20Lampung!5e0!3m2!1sid!2sid!4v1715844529904!5m2!1sid!2sid'
                 frameborder='0' style='min-height: 450px; border:0;' allowfullscreen='' aria-hidden='false'
                 tabindex='0'></iframe>
             </div>
@@ -287,7 +287,7 @@ echo"<!-- Header Start -->
             </div>
            
             <div class='row g-4 portfolio-container'> ";
-            $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC LIMIT 4");              
+            $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC ");              
         while ($t=mysqli_fetch_array($tebaru)){
                 
                 echo"

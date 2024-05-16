@@ -294,7 +294,7 @@ while ($t=mysqli_fetch_array($tebaru)){ ?>
                     <p class="mb-0">Keindahan Alam yang sangat memukau di setiap sisi pesisir barat lampung</p>
                 </div>
                 <div class="row g-4 text-center">
-                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC  LIMIT 3");
+                <?php $tebaru=mysqli_query($koneksi," SELECT * FROM galeri ORDER BY id_galeri DESC  LIMIT 8");
 while ($t=mysqli_fetch_array($tebaru)){ ?>  
                    <div class="col-lg-6 col-xl-3 mb-5 mb-xl-0 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="country-item">
