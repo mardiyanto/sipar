@@ -16,13 +16,13 @@
                         <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal text-secondary"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 text-center text-lg-end">
+                <!-- <div class="col-lg-4 text-center text-lg-end">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
                         <a href="#" class="text-muted me-2"> Help</a><small> / </small>
                         <a href="#" class="text-muted mx-2"> Support</a><small> / </small>
                         <a href="#" class="text-muted ms-2"> Contact</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Topbar End -->
@@ -54,10 +54,10 @@ while ($r=mysqli_fetch_array($sql)){
                 <a href="utama.php?aksi=galeri" class="nav-item nav-link">Galeri</a>
                 
                 <a href="utama.php?aksi=hubungi" class="nav-item nav-link">Hubungi Kami</a>
-                    </div>
+                    <!-- </div>
                     <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
                     <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
-                </div>
+                </div> -->
             </nav>
         </div>
         <!-- Navbar & Hero End -->
